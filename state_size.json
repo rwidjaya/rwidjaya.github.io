@@ -1,0 +1,1256 @@
+[
+  {
+    "name": "2011",
+    "children": [
+      {
+        "name": "ALABAMA",
+        "size": 1239
+      },
+      {
+        "name": "ALASKA",
+        "size": 141
+      },
+      {
+        "name": "ARIZONA",
+        "size": 3716
+      },
+      {
+        "name": "ARKANSAS",
+        "size": 1504
+      },
+      {
+        "name": "CALIFORNIA",
+        "size": 56252
+      },
+      {
+        "name": "COLORADO",
+        "size": 3102
+      },
+      {
+        "name": "CONNECTICUT",
+        "size": 5167
+      },
+      {
+        "name": "DELAWARE",
+        "size": 1917
+      },
+      {
+        "name": "DISTRICT OF COLUMBIA",
+        "size": 2912
+      },
+      {
+        "name": "FLORIDA",
+        "size": 12346
+      },
+      {
+        "name": "GEORGIA",
+        "size": 9253
+      },
+      {
+        "name": "HAWAII",
+        "size": 483
+      },
+      {
+        "name": "IDAHO",
+        "size": 517
+      },
+      {
+        "name": "ILLINOIS",
+        "size": 16150
+      },
+      {
+        "name": "INDIANA",
+        "size": 3321
+      },
+      {
+        "name": "IOWA",
+        "size": 2002
+      },
+      {
+        "name": "KANSAS",
+        "size": 1486
+      },
+      {
+        "name": "KENTUCKY",
+        "size": 1354
+      },
+      {
+        "name": "LOUISIANA",
+        "size": 1282
+      },
+      {
+        "name": "MAINE",
+        "size": 456
+      },
+      {
+        "name": "MARYLAND",
+        "size": 7336
+      },
+      {
+        "name": "MASSACHUSETTS",
+        "size": 12801
+      },
+      {
+        "name": "MICHIGAN",
+        "size": 7178
+      },
+      {
+        "name": "MINNESOTA",
+        "size": 5135
+      },
+      {
+        "name": "MISSISSIPPI",
+        "size": 534
+      },
+      {
+        "name": "MISSOURI",
+        "size": 3299
+      },
+      {
+        "name": "MONTANA",
+        "size": 131
+      },
+      {
+        "name": "NEBRASKA",
+        "size": 937
+      },
+      {
+        "name": "NEVADA",
+        "size": 848
+      },
+      {
+        "name": "NEW HAMPSHIRE",
+        "size": 1037
+      },
+      {
+        "name": "NEW JERSEY",
+        "size": 20750
+      },
+      {
+        "name": "NEW MEXICO",
+        "size": 640
+      },
+      {
+        "name": "NEW YORK",
+        "size": 35244
+      },
+      {
+        "name": "NORTH CAROLINA",
+        "size": 6799
+      },
+      {
+        "name": "NORTH DAKOTA",
+        "size": 336
+      },
+      {
+        "name": "OHIO",
+        "size": 7554
+      },
+      {
+        "name": "OKLAHOMA",
+        "size": 1205
+      },
+      {
+        "name": "OREGON",
+        "size": 2509
+      },
+      {
+        "name": "PENNSYLVANIA",
+        "size": 11331
+      },
+      {
+        "name": "RHODE ISLAND",
+        "size": 907
+      },
+      {
+        "name": "SOUTH CAROLINA",
+        "size": 1385
+      },
+      {
+        "name": "SOUTH DAKOTA",
+        "size": 277
+      },
+      {
+        "name": "TENNESSEE",
+        "size": 2974
+      },
+      {
+        "name": "TEXAS",
+        "size": 26851
+      },
+      {
+        "name": "UTAH",
+        "size": 1190
+      },
+      {
+        "name": "VERMONT",
+        "size": 251
+      },
+      {
+        "name": "VIRGINIA",
+        "size": 9530
+      },
+      {
+        "name": "WASHINGTON",
+        "size": 10013
+      },
+      {
+        "name": "WEST VIRGINIA",
+        "size": 365
+      },
+      {
+        "name": "WISCONSIN",
+        "size": 3313
+      },
+      {
+        "name": "WYOMING",
+        "size": 92
+      }
+    ]
+  },
+  {
+    "name": "2012",
+    "children": [
+      {
+        "name": "ALABAMA",
+        "size": 1271
+      },
+      {
+        "name": "ALASKA",
+        "size": 204
+      },
+      {
+        "name": "ARIZONA",
+        "size": 4629
+      },
+      {
+        "name": "ARKANSAS",
+        "size": 1682
+      },
+      {
+        "name": "CALIFORNIA",
+        "size": 64537
+      },
+      {
+        "name": "COLORADO",
+        "size": 3552
+      },
+      {
+        "name": "CONNECTICUT",
+        "size": 6794
+      },
+      {
+        "name": "DELAWARE",
+        "size": 2059
+      },
+      {
+        "name": "DISTRICT OF COLUMBIA",
+        "size": 2932
+      },
+      {
+        "name": "FLORIDA",
+        "size": 13585
+      },
+      {
+        "name": "GEORGIA",
+        "size": 10978
+      },
+      {
+        "name": "HAWAII",
+        "size": 578
+      },
+      {
+        "name": "IDAHO",
+        "size": 511
+      },
+      {
+        "name": "ILLINOIS",
+        "size": 19427
+      },
+      {
+        "name": "INDIANA",
+        "size": 3607
+      },
+      {
+        "name": "IOWA",
+        "size": 2141
+      },
+      {
+        "name": "KANSAS",
+        "size": 1744
+      },
+      {
+        "name": "KENTUCKY",
+        "size": 1683
+      },
+      {
+        "name": "LOUISIANA",
+        "size": 1337
+      },
+      {
+        "name": "MAINE",
+        "size": 499
+      },
+      {
+        "name": "MARYLAND",
+        "size": 6821
+      },
+      {
+        "name": "MASSACHUSETTS",
+        "size": 13974
+      },
+      {
+        "name": "MICHIGAN",
+        "size": 8489
+      },
+      {
+        "name": "MINNESOTA",
+        "size": 6101
+      },
+      {
+        "name": "MISSISSIPPI",
+        "size": 525
+      },
+      {
+        "name": "MISSOURI",
+        "size": 4036
+      },
+      {
+        "name": "MONTANA",
+        "size": 111
+      },
+      {
+        "name": "NEBRASKA",
+        "size": 1070
+      },
+      {
+        "name": "NEVADA",
+        "size": 936
+      },
+      {
+        "name": "NEW HAMPSHIRE",
+        "size": 1336
+      },
+      {
+        "name": "NEW JERSEY",
+        "size": 24277
+      },
+      {
+        "name": "NEW MEXICO",
+        "size": 768
+      },
+      {
+        "name": "NEW YORK",
+        "size": 37086
+      },
+      {
+        "name": "NORTH CAROLINA",
+        "size": 9119
+      },
+      {
+        "name": "NORTH DAKOTA",
+        "size": 381
+      },
+      {
+        "name": "OHIO",
+        "size": 9114
+      },
+      {
+        "name": "OKLAHOMA",
+        "size": 1317
+      },
+      {
+        "name": "OREGON",
+        "size": 2662
+      },
+      {
+        "name": "PENNSYLVANIA",
+        "size": 13539
+      },
+      {
+        "name": "RHODE ISLAND",
+        "size": 1146
+      },
+      {
+        "name": "SOUTH CAROLINA",
+        "size": 1509
+      },
+      {
+        "name": "SOUTH DAKOTA",
+        "size": 234
+      },
+      {
+        "name": "TENNESSEE",
+        "size": 3791
+      },
+      {
+        "name": "TEXAS",
+        "size": 31841
+      },
+      {
+        "name": "UTAH",
+        "size": 1438
+      },
+      {
+        "name": "VERMONT",
+        "size": 240
+      },
+      {
+        "name": "VIRGINIA",
+        "size": 10516
+      },
+      {
+        "name": "WASHINGTON",
+        "size": 11464
+      },
+      {
+        "name": "WEST VIRGINIA",
+        "size": 384
+      },
+      {
+        "name": "WISCONSIN",
+        "size": 3845
+      },
+      {
+        "name": "WYOMING",
+        "size": 112
+      }
+    ]
+  },
+  {
+    "name": "2013",
+    "children": [
+      {
+        "name": "ALABAMA",
+        "size": 1216
+      },
+      {
+        "name": "ALASKA",
+        "size": 208
+      },
+      {
+        "name": "ARIZONA",
+        "size": 5653
+      },
+      {
+        "name": "ARKANSAS",
+        "size": 2191
+      },
+      {
+        "name": "CALIFORNIA",
+        "size": 72171
+      },
+      {
+        "name": "COLORADO",
+        "size": 4147
+      },
+      {
+        "name": "CONNECTICUT",
+        "size": 6499
+      },
+      {
+        "name": "DELAWARE",
+        "size": 2696
+      },
+      {
+        "name": "DISTRICT OF COLUMBIA",
+        "size": 3092
+      },
+      {
+        "name": "FLORIDA",
+        "size": 13254
+      },
+      {
+        "name": "GEORGIA",
+        "size": 12379
+      },
+      {
+        "name": "HAWAII",
+        "size": 517
+      },
+      {
+        "name": "IDAHO",
+        "size": 496
+      },
+      {
+        "name": "ILLINOIS",
+        "size": 21516
+      },
+      {
+        "name": "INDIANA",
+        "size": 3447
+      },
+      {
+        "name": "IOWA",
+        "size": 2221
+      },
+      {
+        "name": "KANSAS",
+        "size": 1942
+      },
+      {
+        "name": "KENTUCKY",
+        "size": 1687
+      },
+      {
+        "name": "LOUISIANA",
+        "size": 1404
+      },
+      {
+        "name": "MAINE",
+        "size": 591
+      },
+      {
+        "name": "MARYLAND",
+        "size": 6805
+      },
+      {
+        "name": "MASSACHUSETTS",
+        "size": 14282
+      },
+      {
+        "name": "MICHIGAN",
+        "size": 10079
+      },
+      {
+        "name": "MINNESOTA",
+        "size": 6487
+      },
+      {
+        "name": "MISSISSIPPI",
+        "size": 554
+      },
+      {
+        "name": "MISSOURI",
+        "size": 4389
+      },
+      {
+        "name": "MONTANA",
+        "size": 116
+      },
+      {
+        "name": "NEBRASKA",
+        "size": 1181
+      },
+      {
+        "name": "NEVADA",
+        "size": 926
+      },
+      {
+        "name": "NEW HAMPSHIRE",
+        "size": 1382
+      },
+      {
+        "name": "NEW JERSEY",
+        "size": 26243
+      },
+      {
+        "name": "NEW MEXICO",
+        "size": 702
+      },
+      {
+        "name": "NEW YORK",
+        "size": 36460
+      },
+      {
+        "name": "NORTH CAROLINA",
+        "size": 10443
+      },
+      {
+        "name": "NORTH DAKOTA",
+        "size": 387
+      },
+      {
+        "name": "OHIO",
+        "size": 10380
+      },
+      {
+        "name": "OKLAHOMA",
+        "size": 1370
+      },
+      {
+        "name": "OREGON",
+        "size": 3301
+      },
+      {
+        "name": "PENNSYLVANIA",
+        "size": 14799
+      },
+      {
+        "name": "RHODE ISLAND",
+        "size": 1652
+      },
+      {
+        "name": "SOUTH CAROLINA",
+        "size": 1451
+      },
+      {
+        "name": "SOUTH DAKOTA",
+        "size": 217
+      },
+      {
+        "name": "TENNESSEE",
+        "size": 3539
+      },
+      {
+        "name": "TEXAS",
+        "size": 36408
+      },
+      {
+        "name": "UTAH",
+        "size": 1645
+      },
+      {
+        "name": "VERMONT",
+        "size": 236
+      },
+      {
+        "name": "VIRGINIA",
+        "size": 11262
+      },
+      {
+        "name": "WASHINGTON",
+        "size": 13415
+      },
+      {
+        "name": "WEST VIRGINIA",
+        "size": 372
+      },
+      {
+        "name": "WISCONSIN",
+        "size": 4533
+      },
+      {
+        "name": "WYOMING",
+        "size": 93
+      }
+    ]
+  },
+  {
+    "name": "2014",
+    "children": [
+      {
+        "name": "ALABAMA",
+        "size": 1512
+      },
+      {
+        "name": "ALASKA",
+        "size": 201
+      },
+      {
+        "name": "ARIZONA",
+        "size": 6544
+      },
+      {
+        "name": "ARKANSAS",
+        "size": 2123
+      },
+      {
+        "name": "CALIFORNIA",
+        "size": 85164
+      },
+      {
+        "name": "COLORADO",
+        "size": 4927
+      },
+      {
+        "name": "CONNECTICUT",
+        "size": 8061
+      },
+      {
+        "name": "DELAWARE",
+        "size": 2758
+      },
+      {
+        "name": "DISTRICT OF COLUMBIA",
+        "size": 3213
+      },
+      {
+        "name": "FLORIDA",
+        "size": 15563
+      },
+      {
+        "name": "GEORGIA",
+        "size": 16080
+      },
+      {
+        "name": "HAWAII",
+        "size": 476
+      },
+      {
+        "name": "IDAHO",
+        "size": 527
+      },
+      {
+        "name": "ILLINOIS",
+        "size": 24414
+      },
+      {
+        "name": "INDIANA",
+        "size": 4645
+      },
+      {
+        "name": "IOWA",
+        "size": 2786
+      },
+      {
+        "name": "KANSAS",
+        "size": 2099
+      },
+      {
+        "name": "KENTUCKY",
+        "size": 1956
+      },
+      {
+        "name": "LOUISIANA",
+        "size": 1573
+      },
+      {
+        "name": "MAINE",
+        "size": 663
+      },
+      {
+        "name": "MARYLAND",
+        "size": 8164
+      },
+      {
+        "name": "MASSACHUSETTS",
+        "size": 17112
+      },
+      {
+        "name": "MICHIGAN",
+        "size": 12176
+      },
+      {
+        "name": "MINNESOTA",
+        "size": 8126
+      },
+      {
+        "name": "MISSISSIPPI",
+        "size": 575
+      },
+      {
+        "name": "MISSOURI",
+        "size": 5381
+      },
+      {
+        "name": "MONTANA",
+        "size": 115
+      },
+      {
+        "name": "NEBRASKA",
+        "size": 1425
+      },
+      {
+        "name": "NEVADA",
+        "size": 1025
+      },
+      {
+        "name": "NEW HAMPSHIRE",
+        "size": 1455
+      },
+      {
+        "name": "NEW JERSEY",
+        "size": 33243
+      },
+      {
+        "name": "NEW MEXICO",
+        "size": 765
+      },
+      {
+        "name": "NEW YORK",
+        "size": 42169
+      },
+      {
+        "name": "NORTH CAROLINA",
+        "size": 11969
+      },
+      {
+        "name": "NORTH DAKOTA",
+        "size": 423
+      },
+      {
+        "name": "OHIO",
+        "size": 12232
+      },
+      {
+        "name": "OKLAHOMA",
+        "size": 1608
+      },
+      {
+        "name": "OREGON",
+        "size": 4029
+      },
+      {
+        "name": "PENNSYLVANIA",
+        "size": 17167
+      },
+      {
+        "name": "RHODE ISLAND",
+        "size": 2057
+      },
+      {
+        "name": "SOUTH CAROLINA",
+        "size": 1821
+      },
+      {
+        "name": "SOUTH DAKOTA",
+        "size": 253
+      },
+      {
+        "name": "TENNESSEE",
+        "size": 3979
+      },
+      {
+        "name": "TEXAS",
+        "size": 45091
+      },
+      {
+        "name": "UTAH",
+        "size": 2060
+      },
+      {
+        "name": "VERMONT",
+        "size": 317
+      },
+      {
+        "name": "VIRGINIA",
+        "size": 13495
+      },
+      {
+        "name": "WASHINGTON",
+        "size": 15581
+      },
+      {
+        "name": "WEST VIRGINIA",
+        "size": 346
+      },
+      {
+        "name": "WISCONSIN",
+        "size": 5019
+      },
+      {
+        "name": "WYOMING",
+        "size": 106
+      }
+    ]
+  },
+  {
+    "name": "2015",
+    "children": [
+      {
+        "name": "ALABAMA",
+        "size": 1607
+      },
+      {
+        "name": "ALASKA",
+        "size": 158
+      },
+      {
+        "name": "ARIZONA",
+        "size": 7841
+      },
+      {
+        "name": "ARKANSAS",
+        "size": 2777
+      },
+      {
+        "name": "CALIFORNIA",
+        "size": 100710
+      },
+      {
+        "name": "COLORADO",
+        "size": 5843
+      },
+      {
+        "name": "CONNECTICUT",
+        "size": 9262
+      },
+      {
+        "name": "DELAWARE",
+        "size": 3396
+      },
+      {
+        "name": "DISTRICT OF COLUMBIA",
+        "size": 3547
+      },
+      {
+        "name": "FLORIDA",
+        "size": 18296
+      },
+      {
+        "name": "GEORGIA",
+        "size": 20663
+      },
+      {
+        "name": "HAWAII",
+        "size": 465
+      },
+      {
+        "name": "IDAHO",
+        "size": 655
+      },
+      {
+        "name": "ILLINOIS",
+        "size": 29529
+      },
+      {
+        "name": "INDIANA",
+        "size": 5341
+      },
+      {
+        "name": "IOWA",
+        "size": 2825
+      },
+      {
+        "name": "KANSAS",
+        "size": 2312
+      },
+      {
+        "name": "KENTUCKY",
+        "size": 2222
+      },
+      {
+        "name": "LOUISIANA",
+        "size": 2245
+      },
+      {
+        "name": "MAINE",
+        "size": 660
+      },
+      {
+        "name": "MARYLAND",
+        "size": 9359
+      },
+      {
+        "name": "MASSACHUSETTS",
+        "size": 20389
+      },
+      {
+        "name": "MICHIGAN",
+        "size": 16148
+      },
+      {
+        "name": "MINNESOTA",
+        "size": 9073
+      },
+      {
+        "name": "MISSISSIPPI",
+        "size": 641
+      },
+      {
+        "name": "MISSOURI",
+        "size": 6223
+      },
+      {
+        "name": "MONTANA",
+        "size": 171
+      },
+      {
+        "name": "NEBRASKA",
+        "size": 1533
+      },
+      {
+        "name": "NEVADA",
+        "size": 1127
+      },
+      {
+        "name": "NEW HAMPSHIRE",
+        "size": 1779
+      },
+      {
+        "name": "NEW JERSEY",
+        "size": 43463
+      },
+      {
+        "name": "NEW MEXICO",
+        "size": 881
+      },
+      {
+        "name": "NEW YORK",
+        "size": 47703
+      },
+      {
+        "name": "NORTH CAROLINA",
+        "size": 15637
+      },
+      {
+        "name": "NORTH DAKOTA",
+        "size": 472
+      },
+      {
+        "name": "OHIO",
+        "size": 14485
+      },
+      {
+        "name": "OKLAHOMA",
+        "size": 1814
+      },
+      {
+        "name": "OREGON",
+        "size": 4199
+      },
+      {
+        "name": "PENNSYLVANIA",
+        "size": 20146
+      },
+      {
+        "name": "RHODE ISLAND",
+        "size": 2670
+      },
+      {
+        "name": "SOUTH CAROLINA",
+        "size": 2435
+      },
+      {
+        "name": "SOUTH DAKOTA",
+        "size": 337
+      },
+      {
+        "name": "TENNESSEE",
+        "size": 4580
+      },
+      {
+        "name": "TEXAS",
+        "size": 55066
+      },
+      {
+        "name": "UTAH",
+        "size": 2433
+      },
+      {
+        "name": "VERMONT",
+        "size": 317
+      },
+      {
+        "name": "VIRGINIA",
+        "size": 16968
+      },
+      {
+        "name": "WASHINGTON",
+        "size": 19225
+      },
+      {
+        "name": "WEST VIRGINIA",
+        "size": 480
+      },
+      {
+        "name": "WISCONSIN",
+        "size": 6288
+      },
+      {
+        "name": "WYOMING",
+        "size": 118
+      }
+    ]
+  },
+  {
+    "name": "2016",
+    "children": [
+      {
+        "name": "ALABAMA",
+        "size": 1733
+      },
+      {
+        "name": "ALASKA",
+        "size": 154
+      },
+      {
+        "name": "ARIZONA",
+        "size": 8692
+      },
+      {
+        "name": "ARKANSAS",
+        "size": 3057
+      },
+      {
+        "name": "CALIFORNIA",
+        "size": 104070
+      },
+      {
+        "name": "COLORADO",
+        "size": 5507
+      },
+      {
+        "name": "CONNECTICUT",
+        "size": 9100
+      },
+      {
+        "name": "DELAWARE",
+        "size": 3081
+      },
+      {
+        "name": "DISTRICT OF COLUMBIA",
+        "size": 3566
+      },
+      {
+        "name": "FLORIDA",
+        "size": 18684
+      },
+      {
+        "name": "GEORGIA",
+        "size": 22229
+      },
+      {
+        "name": "HAWAII",
+        "size": 432
+      },
+      {
+        "name": "IDAHO",
+        "size": 765
+      },
+      {
+        "name": "ILLINOIS",
+        "size": 31270
+      },
+      {
+        "name": "INDIANA",
+        "size": 5396
+      },
+      {
+        "name": "IOWA",
+        "size": 2513
+      },
+      {
+        "name": "KANSAS",
+        "size": 2457
+      },
+      {
+        "name": "KENTUCKY",
+        "size": 2347
+      },
+      {
+        "name": "LOUISIANA",
+        "size": 1890
+      },
+      {
+        "name": "MAINE",
+        "size": 629
+      },
+      {
+        "name": "MARYLAND",
+        "size": 9406
+      },
+      {
+        "name": "MASSACHUSETTS",
+        "size": 21644
+      },
+      {
+        "name": "MICHIGAN",
+        "size": 18436
+      },
+      {
+        "name": "MINNESOTA",
+        "size": 8933
+      },
+      {
+        "name": "MISSISSIPPI",
+        "size": 700
+      },
+      {
+        "name": "MISSOURI",
+        "size": 6871
+      },
+      {
+        "name": "MONTANA",
+        "size": 159
+      },
+      {
+        "name": "NEBRASKA",
+        "size": 1768
+      },
+      {
+        "name": "NEVADA",
+        "size": 1176
+      },
+      {
+        "name": "NEW HAMPSHIRE",
+        "size": 1677
+      },
+      {
+        "name": "NEW JERSEY",
+        "size": 43174
+      },
+      {
+        "name": "NEW MEXICO",
+        "size": 927
+      },
+      {
+        "name": "NEW YORK",
+        "size": 51293
+      },
+      {
+        "name": "NORTH CAROLINA",
+        "size": 16552
+      },
+      {
+        "name": "NORTH DAKOTA",
+        "size": 456
+      },
+      {
+        "name": "OHIO",
+        "size": 14742
+      },
+      {
+        "name": "OKLAHOMA",
+        "size": 1763
+      },
+      {
+        "name": "OREGON",
+        "size": 4135
+      },
+      {
+        "name": "PENNSYLVANIA",
+        "size": 21141
+      },
+      {
+        "name": "RHODE ISLAND",
+        "size": 2244
+      },
+      {
+        "name": "SOUTH CAROLINA",
+        "size": 2528
+      },
+      {
+        "name": "SOUTH DAKOTA",
+        "size": 297
+      },
+      {
+        "name": "TENNESSEE",
+        "size": 4967
+      },
+      {
+        "name": "TEXAS",
+        "size": 59694
+      },
+      {
+        "name": "UTAH",
+        "size": 2542
+      },
+      {
+        "name": "VERMONT",
+        "size": 315
+      },
+      {
+        "name": "VIRGINIA",
+        "size": 16670
+      },
+      {
+        "name": "WASHINGTON",
+        "size": 20387
+      },
+      {
+        "name": "WEST VIRGINIA",
+        "size": 469
+      },
+      {
+        "name": "WISCONSIN",
+        "size": 6273
+      },
+      {
+        "name": "WYOMING",
+        "size": 104
+      }
+    ]
+  }
+]
