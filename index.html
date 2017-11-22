@@ -96,8 +96,10 @@
     
 
     d3.select("#sliderControl").on("input", function() {
-        var init_year = this.value - 2011;
-        var currentData = data[init_year];
+        var index = this.value - 2011;
+        var currentData = data[index];
+
+        document.querySelector("#slider h2").innerHTML = headline + " " + this.value;
 
         newRoots = d3.hierarchy(currentData)
         .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
@@ -108,10 +110,10 @@
 
     });
 
-    function changed(roots) {
-      document.querySelector("svg").innerHTML = "";
-      makeChart(roots);    
-      };
+  function changed(roots) {
+    document.querySelector("svg").innerHTML = "";
+    makeChart(roots);    
+    };
   });
 
 
