@@ -21,8 +21,8 @@
       <svg width="960" height="570"></svg>
     </div>
   </div>
-
   <script type="text/javascript" src="d3.js"></script>
+  
   <script>
   var svg = d3.select("svg"),
       headline = "Number of H1-B Certifications in",
@@ -48,7 +48,9 @@
 
   d3.select("#slider").insert("h2", ":first-child").text(headline + " " + 2011);
 
-  // Reading Data
+  var cell; 
+
+// Reading Data
   d3.json("company_size.json", function(error, data) {
     if (error) throw error;
 
@@ -62,28 +64,29 @@
     treemap(root);
     makeTreemap(root);
 
-    // On Select
+    // On Select: Calling Update Function
     d3.select("#sliderControl").on("input", function() {
       var index = this.value - 2011;
       var currentData = data[index];
 
       document.querySelector("#slider h2").innerHTML = headline + " " + this.value;
 
-      newRoots = d3.hierarchy(currentData)
+      var newRoots = d3.hierarchy(currentData)
         .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
         .sum(function(d){return d.size})
         .sort(function(a, b) { return b.height - a.height || a.value - b.value; });
 
       changed(newRoots);
     });
+  });
 
-
-    // FUNCTIONS
-    // Builder Function
+// FUNCTIONS
+  // Builder Function
     function makeTreemap(rt) {
       var cell = svg.selectAll("g")
         .data(rt.leaves())
         .enter().append("g")
+        .attr("id", function(d) { return d.data.id; })
         .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
 
       cell.append("rect")
@@ -110,26 +113,19 @@
           .text(function(d) { return d.data.id+ "\n" + format(d.value); });
     };
 
-    function changed(roots) {
-      d3.select("svg").selectAll('*').remove();
-      treemap(roots);
-      makeTreemap(roots);   
-    }
+    // Update Function
+      function changed(roots) {
+        treemap(roots);
 
-  // Change/Transition Function
-    // function changed(roots) {
-    //   treemap(roots);
-    //   // document.querySelector("svg").innerHTML = "";
-    //   console.log(roots);
+        svg.selectAll("g")
+            .data(roots.leaves())
+            .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; }) 
+          .select("rect")
+            .attr("width", function(d) { return d.x1 - d.x0; })
+            .attr("height", function(d) { return d.y1 - d.y0; });
+      }
 
-    //   cell.transition()
-    //       .duration(750)
-    //       .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
-    //     .select("rect")
-    //       .attr("width", function(d) { return d.x1 - d.x0; })
-    //       .attr("height", function(d) { return d.y1 - d.y0; });
-    // }
-  });
+
   </script>
 
 </body>
