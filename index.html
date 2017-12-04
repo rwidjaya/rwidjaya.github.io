@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <style>
+  /*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">*/
 
   form {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -10,43 +11,106 @@
     font: 10px sans-serif;
   }
 
+  .x.axis path {
+  display: none;
+  }
+
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+
+path { 
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.bar--positive {
+      fill: steelblue;
+    }
+
+.bar--negative {
+  fill: brown;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+
+
   </style>
 </head>
 
+
 <body>
+<script type="text/javascript" src="d3.js"></script>
 
   <div class="container">
-    <div id="slider"></div>
-    <div id="chart">
-      <svg width="960" height="570"></svg>
+
+<!--     <div id="option">
+    <input name="updateButton" 
+           type="button" 
+           value="Update" 
+           onclick="updateData()" />
+    </div> -->
+
+    <div id="chart-1"> 
+      <svg width="960" height="500"></svg>
     </div>
+
+    <div id="slider"></div>
+
+    <div id="chart-2">
+      <svg width="960" height="550"></svg>
+    </div>
+
+    <div id="chart-3">
+      <svg width="960" height="700"></svg>
+    </div>
+
   </div>
-  <script type="text/javascript" src="d3.js"></script>
 
   <script>
-  var svg = d3.select("svg"),
+  //
+  // TREEMAP
+  //
+
+  var chart2 = d3.select("#chart-2 svg"),
       headline = "Number of H1-B Certifications in",
-      width = +svg.attr("width"),
-      height = +svg.attr("height");
+      width2 = +chart2.attr("width"),
+      height2 = +chart2.attr("height");
 
   var company_size = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
-      color = d3.scaleOrdinal(d3.schemeCategory20.map(company_size)),
+      color = d3.scaleOrdinal()
+                .range(["#0E3D59", "#88A61B" , "#F29F05", "#F25C05", "#D92525"])
+                .domain(company_size),
       format = d3.format(",d");
 
   var treemap = d3.treemap()
       .tile(d3.treemapResquarify)
-      .size([width/1.5, height])
+      .size([width2/1.5, height2])
       .round(true)
-      .paddingInner(1);
+      .paddingInner(2);
 
   d3.select("#slider").insert("p", ":first-child").append("input")
       .attr("type", "range")
-      .attr("min", "2011")
+      .attr("min", "2014")
       .attr("max", "2016")
-      .attr("value", 2011)
+      .attr("value", 2014)
       .attr("id", "sliderControl");
 
-  d3.select("#slider").insert("h2", ":first-child").text(headline + " " + 2011);
+  d3.select("#slider").insert("h2", ":first-child").text(headline + " " + 2014);
 
   var cell; 
 
@@ -58,7 +122,7 @@
     var root = d3.hierarchy(data[0])
         .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name;})
         .sum(function(d){return d.size})
-        .sort(function(a, b) { return b.height - a.height || a.value - b.value; });
+        .sort(function(a, b) { return b.height2 - a.height2 || a.value - b.value; });
 
     // Make treemap object and call the make treemap function 
     treemap(root);
@@ -66,7 +130,7 @@
 
     // On Select: Calling Update Function
     d3.select("#sliderControl").on("input", function() {
-      var index = this.value - 2011;
+      var index = this.value - 2014;
       var currentData = data[index];
 
       document.querySelector("#slider h2").innerHTML = headline + " " + this.value;
@@ -74,7 +138,7 @@
       var newRoots = d3.hierarchy(currentData)
         .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
         .sum(function(d){return d.size})
-        .sort(function(a, b) { return b.height - a.height || a.value - b.value; });
+        .sort(function(a, b) { return b.height2 - a.height2 || a.value - b.value; });
 
       changed(newRoots);
     });
@@ -83,7 +147,7 @@
 // FUNCTIONS
   // Builder Function
     function makeTreemap(rt) {
-      var cell = svg.selectAll("g")
+      var cell = chart2.selectAll("g")
         .data(rt.leaves())
         .enter().append("g")
         .attr("id", function(d) { return d.data.id; })
@@ -117,7 +181,7 @@
       function changed(roots) {
         treemap(roots);
 
-        svg.selectAll("g")
+        chart2.selectAll("g")
             .data(roots.leaves())
             .transition().duration(750)
               .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; }) 
@@ -125,6 +189,217 @@
             .attr("width", function(d) { return d.x1 - d.x0; })
             .attr("height", function(d) { return d.y1 - d.y0; });
       }
+
+  //
+  // LINE CHART
+  //
+
+  var chart1 = d3.select("#chart-1 svg"),
+      margin1 = {top: 50, right: 60, bottom: 30, left: 50},
+      width1 = chart1.attr("width") - margin1.left - margin1.right,
+      height1 = chart1.attr("height") - margin1.top - margin1.bottom;
+
+  var parseDate = d3.timeParse("%Y");
+
+  var x_1 = d3.scaleTime().range([0, width1]),
+      y_1 = d3.scaleLinear().range([height1, 0]),
+      z_1 = d3.scaleOrdinal(d3.schemeCategory10);
+
+  var line = d3.line()
+      .curve(d3.curveBasis)
+      .x(function(d) { return x_1(d.date); })
+      .y(function(d) { return y_1(d.approvals); })
+
+  d3.csv("h1b_country_10_I.csv", type1, function(error, data) {
+    if (error) throw error;
+
+    var country = data.columns.slice(1).map(function(id) {
+      return {
+        id: id,
+        values: data.map(function(d) {
+          return {date: d.date, approvals: d[id]};
+        })
+      };
+    });
+    
+    var g1 = chart1.append("g")
+        .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+
+    console.log(data)
+
+    x_1.domain(d3.extent(data, function(d) { return d.date; }));
+    y_1.domain([
+      d3.min(country, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
+      d3.max(country, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
+      ]);
+    z_1.domain(country.map(function(c) { return c.id; }));
+
+    g1.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(d3.axisBottom(x_1));
+
+    g1.append("g")
+        .attr("class", "y axis")
+        .call(d3.axisLeft(y_1))
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("fill", "#000")
+        .text("# of H1-B Approvals");
+
+    var country = g1.selectAll(".country")
+      .data(country)
+      .enter().append("g")
+        .attr("class", "country");
+
+    var path = country.append("path")
+        .attr("class", "line")
+        .attr("d", function(d) { return line(d.values); })
+        .style("stroke", function(d) { return z_1(d.id); });
+
+    var totalLength = path.node().getTotalLength();
+
+    path
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+        .attr("stroke-dashoffset", totalLength)
+        .transition() 
+        .duration(4000) 
+        .ease(d3.easeLinear) 
+        .attr("stroke-dashoffset", 0);
+
+    country
+      .append("text")
+        .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
+        .attr("transform", function(d) { return "translate(" + x_1(d.value.date) + "," + y_1(d.value.approvals) + ")"; })
+        .attr("x", 3)
+        .attr("dy", "0.35em")
+        .style("font", "10px sans-serif")
+        .text(function(d) { return d.id; });
+  });
+
+  // // UPDATE DATA????
+  // function updateData() {
+  //     d3.csv("h1b_country_10.csv", type, function(error, data) {
+  //       if (error) throw error;
+  //       var country = data.columns.slice(1).map(function(id) {
+  //         return {
+  //           id: id,
+  //           values: data.map(function(d) {
+  //             return {date: d.date, approvals: d[id]};
+  //             })
+  //           };
+  //         });
+  //       console.log(data[1])
+
+  //       x.domain(d3.extent(data, function(d) { return d.date; }));
+  //       y.domain([
+  //         d3.min(country, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
+  //         d3.max(country, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
+  //         ]);
+  //       z.domain(country.map(function(c) { return c.id; }));
+
+
+
+  //       // Select the section we want to apply our changes to
+
+  //       var chart2Alt = d3.selectAll(".county")
+  //               .data(country)
+  //               .transition();
+
+  //       console.log(line(data))
+
+  //       // Make the changes
+  //           chart2Alt.select(".line")
+  //               .duration(750)
+  //               .attr("d", function(d) { return line(d.values); })
+  //               .style("stroke", function(d) { return z(d.id); });
+  //           chart2Alt.select(".x.axis") // change the x axis
+  //               .duration(750)
+  //               .call(x);
+  //           chart2Alt.select(".y.axis") // change the y axis
+  //               .duration(750)
+  //               .call(y);
+  //   });
+  // }
+
+  function type1(d, _, columns) {
+    d.date = parseDate(d.date);
+    for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+    return d;
+  }
+
+  //
+  //NEGATIVE BAR
+  //
+
+  var margin3 = {top: 20, right: 30, bottom: 50, left: 30},
+      width3 = 550 + margin3.left + margin3.right,
+      height3 =550 + margin3.top + margin3.bottom;
+
+  // // X scale
+  var x_3 = d3.scaleLinear()
+            .range([0, width3]);
+  var y_3 = d3.scaleBand()
+            .rangeRound([height3/1.25, 0]);
+
+  var xAxis = d3.axisBottom(x_3);
+  var yAxis = d3.axisLeft(y_3)
+                .tickSize(6, 0);
+
+  var chart3 = d3.select("#chart-3 svg")
+    .attr("width", width3) 
+    .attr("height", height3) 
+    .append("g")
+    .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+
+  setTimeout(function() {
+    d3.csv('h1b_neg.csv', type2, function (error, data) {
+      if (error) throw error;
+
+      console.log(data)
+
+      x_3.domain(d3.extent(data, function (d) {return d.value;})).nice();
+      y_3.domain(data.map(function (d) {return d.name;}));
+
+      chart3.selectAll('.bar')
+        .data(data)
+        .enter().append('rect')
+        .attr('class', function (d) {
+            return "bar bar--" + (d.value < 0 ? "negative" : "positive");
+          })
+        .attr('x', function (d) {return x_3(Math.min(0, d.value));})
+        .attr('y', function (d) {return y_3(d.name);})
+        .attr('width', function (d) {return Math.abs(x_3(d.value) - x_3(0));})
+        .attr('height', 20);
+
+      chart3.append('g')
+          .attr('class', 'x axis')
+          .attr('transform', 'translate(0,' +( height3 - margin3.bottom*2 - 31) + ')')
+          .call(xAxis);
+
+      var tickNegative = chart3.append('g')
+        .attr('class', 'y axis')
+        .attr('transform', 'translate(' + x_3(0) + ','+(-8)+')')
+        .call(yAxis)
+        .selectAll('.tick')
+        .filter(function (d, i) {return data[i].value < 0;});
+
+      tickNegative.select('line')
+        .attr('x2', 6);
+
+      tickNegative.select('text')
+        .attr('x', 9)
+        .style('text-anchor', 'start');
+    });
+  }, 300);
+
+  function type2(d) {
+    d.value = +d.value;
+    return d;
+  }
+
 
 
   </script>
