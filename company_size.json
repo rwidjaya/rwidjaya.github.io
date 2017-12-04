@@ -1,422 +1,5 @@
 [
   {
-    "name": "Y2011",
-    "children": [
-      {
-        "name": "Foreign Outsourcing",
-        "children": [
-          {
-            "name": "Infosys Limited",
-            "size": 185
-          },
-          {
-            "name": "Tata Consultancy Services Limited",
-            "size": 5365
-          },
-          {
-            "name": "Wipro Limited",
-            "size": 2905
-          },
-          {
-            "name": "Accenture Llp",
-            "size": 1204
-          },
-          {
-            "name": "Hcl America, Inc.",
-            "size": 1573
-          },
-          {
-            "name": "Larsen & Toubro Infotech Limited",
-            "size": 1883
-          },
-          {
-            "name": "Tech Mahindra (americas), Inc.",
-            "size": 293
-          },
-          {
-            "name": "Ust Global Inc.",
-            "size": 1160
-          },
-          {
-            "name": "Mphasis Corporation",
-            "size": 662
-          },
-          {
-            "name": "Hexaware Technologies, Inc.",
-            "size": 353
-          }
-        ]
-      },
-      {
-        "name": "Foreign Technology",
-        "children": [
-          {
-            "name": "Ibm India Private Limited",
-            "size": 972
-          }
-        ]
-      },
-      {
-        "name": "Other",
-        "children": [
-          {
-            "name": "Other",
-            "size": 270074
-          }
-        ]
-      },
-      {
-        "name": "US Firm",
-        "children": [
-          {
-            "name": "Deloitte Consulting Llp",
-            "size": 3509
-          },
-          {
-            "name": "Ernst & Young U.s. Llp",
-            "size": 1306
-          },
-          {
-            "name": "Deloitte & Touche Llp",
-            "size": 1355
-          },
-          {
-            "name": "Jpmorgan Chase & Co.",
-            "size": 535
-          },
-          {
-            "name": "Fujitsu America, Inc.",
-            "size": 936
-          }
-        ]
-      },
-      {
-        "name": "US Outsourcing",
-        "children": [
-          {
-            "name": "Cognizant Technology Solutions U.s. Corporation",
-            "size": 2477
-          },
-          {
-            "name": "igate Technologies Inc.",
-            "size": 76
-          }
-        ]
-      },
-      {
-        "name": "US Technology",
-        "children": [
-          {
-            "name": "Microsoft Corporation",
-            "size": 3898
-          },
-          {
-            "name": "Google Inc.",
-            "size": 1183
-          },
-          {
-            "name": "Ibm Corporation",
-            "size": 1692
-          },
-          {
-            "name": "Intel Corporation",
-            "size": 1799
-          },
-          {
-            "name": "Amazon Corporate Llc",
-            "size": 593
-          },
-          {
-            "name": "Apple Inc.",
-            "size": 739
-          },
-          {
-            "name": "Oracle America, Inc.",
-            "size": 1209
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Y2012",
-    "children": [
-      {
-        "name": "Foreign Outsourcing",
-        "children": [
-          {
-            "name": "Infosys Limited",
-            "size": 15409
-          },
-          {
-            "name": "Tata Consultancy Services Limited",
-            "size": 6692
-          },
-          {
-            "name": "Wipro Limited",
-            "size": 6816
-          },
-          {
-            "name": "Accenture Llp",
-            "size": 2595
-          },
-          {
-            "name": "Hcl America, Inc.",
-            "size": 2035
-          },
-          {
-            "name": "Larsen & Toubro Infotech Limited",
-            "size": 2223
-          },
-          {
-            "name": "Tech Mahindra (americas), Inc.",
-            "size": 576
-          },
-          {
-            "name": "Ust Global Inc.",
-            "size": 1306
-          },
-          {
-            "name": "Mphasis Corporation",
-            "size": 912
-          },
-          {
-            "name": "Hexaware Technologies, Inc.",
-            "size": 574
-          }
-        ]
-      },
-      {
-        "name": "Foreign Technology",
-        "children": [
-          {
-            "name": "Ibm India Private Limited",
-            "size": 3096
-          }
-        ]
-      },
-      {
-        "name": "Other",
-        "children": [
-          {
-            "name": "Other",
-            "size": 286962
-          }
-        ]
-      },
-      {
-        "name": "US Firm",
-        "children": [
-          {
-            "name": "Deloitte Consulting Llp",
-            "size": 4706
-          },
-          {
-            "name": "Ernst & Young U.s. Llp",
-            "size": 2275
-          },
-          {
-            "name": "Deloitte & Touche Llp",
-            "size": 1803
-          },
-          {
-            "name": "Jpmorgan Chase & Co.",
-            "size": 621
-          },
-          {
-            "name": "Fujitsu America, Inc.",
-            "size": 623
-          }
-        ]
-      },
-      {
-        "name": "US Outsourcing",
-        "children": [
-          {
-            "name": "Cognizant Technology Solutions U.s. Corporation",
-            "size": 1751
-          },
-          {
-            "name": "igate Technologies Inc.",
-            "size": 526
-          }
-        ]
-      },
-      {
-        "name": "US Technology",
-        "children": [
-          {
-            "name": "Microsoft Corporation",
-            "size": 3718
-          },
-          {
-            "name": "Google Inc.",
-            "size": 1428
-          },
-          {
-            "name": "Ibm Corporation",
-            "size": 1458
-          },
-          {
-            "name": "Intel Corporation",
-            "size": 1462
-          },
-          {
-            "name": "Amazon Corporate Llc",
-            "size": 776
-          },
-          {
-            "name": "Apple Inc.",
-            "size": 901
-          },
-          {
-            "name": "Oracle America, Inc.",
-            "size": 1424
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Y2013",
-    "children": [
-      {
-        "name": "Foreign Outsourcing",
-        "children": [
-          {
-            "name": "Infosys Limited",
-            "size": 32031
-          },
-          {
-            "name": "Tata Consultancy Services Limited",
-            "size": 8701
-          },
-          {
-            "name": "Wipro Limited",
-            "size": 6442
-          },
-          {
-            "name": "Accenture Llp",
-            "size": 4823
-          },
-          {
-            "name": "Hcl America, Inc.",
-            "size": 2922
-          },
-          {
-            "name": "Larsen & Toubro Infotech Limited",
-            "size": 2995
-          },
-          {
-            "name": "Tech Mahindra (americas), Inc.",
-            "size": 780
-          },
-          {
-            "name": "Ust Global Inc.",
-            "size": 546
-          },
-          {
-            "name": "Mphasis Corporation",
-            "size": 849
-          },
-          {
-            "name": "Hexaware Technologies, Inc.",
-            "size": 608
-          }
-        ]
-      },
-      {
-        "name": "Foreign Technology",
-        "children": [
-          {
-            "name": "Ibm India Private Limited",
-            "size": 2713
-          }
-        ]
-      },
-      {
-        "name": "Other",
-        "children": [
-          {
-            "name": "Other",
-            "size": 293177
-          }
-        ]
-      },
-      {
-        "name": "US Firm",
-        "children": [
-          {
-            "name": "Deloitte Consulting Llp",
-            "size": 5913
-          },
-          {
-            "name": "Ernst & Young U.s. Llp",
-            "size": 2163
-          },
-          {
-            "name": "Deloitte & Touche Llp",
-            "size": 1747
-          },
-          {
-            "name": "Jpmorgan Chase & Co.",
-            "size": 951
-          },
-          {
-            "name": "Fujitsu America, Inc.",
-            "size": 541
-          }
-        ]
-      },
-      {
-        "name": "US Outsourcing",
-        "children": [
-          {
-            "name": "Cognizant Technology Solutions U.s. Corporation",
-            "size": 1374
-          },
-          {
-            "name": "igate Technologies Inc.",
-            "size": 1972
-          }
-        ]
-      },
-      {
-        "name": "US Technology",
-        "children": [
-          {
-            "name": "Microsoft Corporation",
-            "size": 3218
-          },
-          {
-            "name": "Google Inc.",
-            "size": 1778
-          },
-          {
-            "name": "Ibm Corporation",
-            "size": 1770
-          },
-          {
-            "name": "Intel Corporation",
-            "size": 1691
-          },
-          {
-            "name": "Amazon Corporate Llc",
-            "size": 1057
-          },
-          {
-            "name": "Apple Inc.",
-            "size": 883
-          },
-          {
-            "name": "Oracle America, Inc.",
-            "size": 1306
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Y2014",
     "children": [
       {
@@ -424,52 +7,39 @@
         "children": [
           {
             "name": "Infosys Limited",
-            "size": 23753
+            "size": 3454
           },
           {
             "name": "Tata Consultancy Services Limited",
-            "size": 13972
+            "size": 5650
           },
           {
             "name": "Wipro Limited",
-            "size": 7266
-          },
-          {
-            "name": "Accenture Llp",
-            "size": 5443
+            "size": 3048
           },
           {
             "name": "Hcl America, Inc.",
-            "size": 4688
+            "size": 855
           },
           {
             "name": "Larsen & Toubro Infotech Limited",
-            "size": 3757
+            "size": 1298
           },
           {
             "name": "Tech Mahindra (americas), Inc.",
-            "size": 1811
+            "size": 1781
           },
           {
-            "name": "Ust Global Inc.",
-            "size": 606
+            "name": "Accenture LLP",
+            "size": 2275
           },
           {
-            "name": "Mphasis Corporation",
-            "size": 932
+            "name": "Capgemini Consulting",
+            "size": 536
           },
           {
-            "name": "Hexaware Technologies, Inc.",
-            "size": 914
-          }
-        ]
-      },
-      {
-        "name": "Foreign Technology",
-        "children": [
-          {
-            "name": "Ibm India Private Limited",
-            "size": 4113
+            "name": "Mindtree",
+            "size": 487
           }
         ]
       },
@@ -478,7 +48,7 @@
         "children": [
           {
             "name": "Other",
-            "size": 355493
+            "size": 52865
           }
         ]
       },
@@ -486,24 +56,24 @@
         "name": "US Firm",
         "children": [
           {
-            "name": "Deloitte Consulting Llp",
-            "size": 6978
+            "name": "Deloitte Consulting LLP",
+            "size": 559
           },
           {
-            "name": "Ernst & Young U.s. Llp",
-            "size": 3548
-          },
-          {
-            "name": "Deloitte & Touche Llp",
-            "size": 1609
+            "name": "Ernst & Young U.S. LLP",
+            "size": 0
           },
           {
             "name": "Jpmorgan Chase & Co.",
-            "size": 1286
+            "size": 0
           },
           {
-            "name": "Fujitsu America, Inc.",
-            "size": 811
+            "name": "Cisco Sys Inc.",
+            "size": 0
+          },
+          {
+            "name": "PriceaterhouseCooper LLC",
+            "size": 0
           }
         ]
       },
@@ -511,12 +81,20 @@
         "name": "US Outsourcing",
         "children": [
           {
-            "name": "Cognizant Technology Solutions U.s. Corporation",
-            "size": 2209
+            "name": "Cognizant Technology Solutions",
+            "size": 4293
           },
           {
             "name": "igate Technologies Inc.",
-            "size": 3077
+            "size": 886
+          },
+          {
+            "name": "Syntel Consulting Inc.",
+            "size": 1080
+          },
+          {
+            "name": "Computer Sciences",
+            "size": 873
           }
         ]
       },
@@ -525,31 +103,27 @@
         "children": [
           {
             "name": "Microsoft Corporation",
-            "size": 2989
+            "size": 850
           },
           {
             "name": "Google Inc.",
-            "size": 2294
+            "size": 728
           },
           {
             "name": "Ibm Corporation",
-            "size": 1850
+            "size": 1462
           },
           {
             "name": "Intel Corporation",
-            "size": 2157
+            "size": 700
           },
           {
-            "name": "Amazon Corporate Llc",
-            "size": 1408
+            "name": "Amazon Corporate LLC",
+            "size": 877
           },
           {
             "name": "Apple Inc.",
-            "size": 1353
-          },
-          {
-            "name": "Oracle America, Inc.",
-            "size": 827
+            "size": 443
           }
         ]
       }
@@ -563,52 +137,39 @@
         "children": [
           {
             "name": "Infosys Limited",
-            "size": 33216
+            "size": 7989
           },
           {
             "name": "Tata Consultancy Services Limited",
-            "size": 16435
+            "size": 7936
           },
           {
             "name": "Wipro Limited",
-            "size": 10519
-          },
-          {
-            "name": "Accenture Llp",
-            "size": 9472
+            "size": 5968
           },
           {
             "name": "Hcl America, Inc.",
-            "size": 6099
+            "size": 2548
           },
           {
             "name": "Larsen & Toubro Infotech Limited",
-            "size": 3451
+            "size": 1277
           },
           {
             "name": "Tech Mahindra (americas), Inc.",
-            "size": 1789
+            "size": 2553
           },
           {
-            "name": "Ust Global Inc.",
-            "size": 1139
+            "name": "Accenture LLP",
+            "size": 5445
           },
           {
-            "name": "Mphasis Corporation",
-            "size": 997
+            "name": "Capgemini Consulting",
+            "size": 0
           },
           {
-            "name": "Hexaware Technologies, Inc.",
-            "size": 1158
-          }
-        ]
-      },
-      {
-        "name": "Foreign Technology",
-        "children": [
-          {
-            "name": "Ibm India Private Limited",
-            "size": 9027
+            "name": "Mindtree",
+            "size": 0
           }
         ]
       },
@@ -617,7 +178,7 @@
         "children": [
           {
             "name": "Other",
-            "size": 416354
+            "size": 116000
           }
         ]
       },
@@ -625,24 +186,24 @@
         "name": "US Firm",
         "children": [
           {
-            "name": "Deloitte Consulting Llp",
-            "size": 7514
+            "name": "Deloitte Consulting LLP",
+            "size": 1744
           },
           {
-            "name": "Ernst & Young U.s. Llp",
-            "size": 4115
-          },
-          {
-            "name": "Deloitte & Touche Llp",
-            "size": 1378
+            "name": "Ernst & Young U.S. LLP",
+            "size": 1287
           },
           {
             "name": "Jpmorgan Chase & Co.",
-            "size": 1443
+            "size": 1106
           },
           {
-            "name": "Fujitsu America, Inc.",
-            "size": 1431
+            "name": "Cisco Sys Inc.",
+            "size": 0
+          },
+          {
+            "name": "PriceaterhouseCooper LLC",
+            "size": 1102
           }
         ]
       },
@@ -650,13 +211,22 @@
         "name": "US Outsourcing",
         "children": [
           {
-            "name": "Cognizant Technology Solutions U.s. Corporation",
-            "size": 3344
+            "name": "Cognizant Technology Solutions",
+            "size": 15547
           },
           {
             "name": "igate Technologies Inc.",
-            "size": 4402
+            "size": 1997
+          },
+          {
+            "name": "Syntel Consulting Inc.",
+            "size": 1721
+          },
+          {
+            "name": "Computer Sciences",
+            "size": 0
           }
+
         ]
       },
       {
@@ -664,31 +234,27 @@
         "children": [
           {
             "name": "Microsoft Corporation",
-            "size": 3841
+            "size": 2523
           },
           {
             "name": "Google Inc.",
-            "size": 2493
+            "size": 2023
           },
           {
             "name": "Ibm Corporation",
-            "size": 1997
+            "size": 2815
           },
           {
             "name": "Intel Corporation",
-            "size": 1434
+            "size": 1358
           },
           {
-            "name": "Amazon Corporate Llc",
-            "size": 1923
+            "name": "Amazon Corporate LLC",
+            "size": 1858
           },
           {
             "name": "Apple Inc.",
-            "size": 1383
-          },
-          {
-            "name": "Oracle America, Inc.",
-            "size": 924
+            "size": 1586
           }
         ]
       }
@@ -702,52 +268,39 @@
         "children": [
           {
             "name": "Infosys Limited",
-            "size": 25322
+            "size": 12780
           },
           {
             "name": "Tata Consultancy Services Limited",
-            "size": 13072
+            "size": 11295
           },
           {
             "name": "Wipro Limited",
-            "size": 9528
-          },
-          {
-            "name": "Accenture Llp",
-            "size": 9374
+            "size": 6819
           },
           {
             "name": "Hcl America, Inc.",
-            "size": 4917
+            "size": 3492
           },
           {
             "name": "Larsen & Toubro Infotech Limited",
-            "size": 2343
+            "size": 1558
           },
           {
             "name": "Tech Mahindra (americas), Inc.",
-            "size": 1065
+            "size": 3344
           },
           {
-            "name": "Ust Global Inc.",
-            "size": 1249
+            "name": "Accenture LLP",
+            "size": 6831
           },
           {
-            "name": "Mphasis Corporation",
-            "size": 773
+            "name": "Capgemini Consulting",
+            "size": 2024
           },
           {
-            "name": "Hexaware Technologies, Inc.",
-            "size": 1512
-          }
-        ]
-      },
-      {
-        "name": "Foreign Technology",
-        "children": [
-          {
-            "name": "Ibm India Private Limited",
-            "size": 7824
+            "name": "Mindtree",
+            "size": 0
           }
         ]
       },
@@ -756,7 +309,7 @@
         "children": [
           {
             "name": "Other",
-            "size": 455273
+            "size": 165904
           }
         ]
       },
@@ -764,24 +317,24 @@
         "name": "US Firm",
         "children": [
           {
-            "name": "Deloitte Consulting Llp",
-            "size": 7500
+            "name": "Deloitte Consulting LLP",
+            "size": 3114
           },
           {
-            "name": "Ernst & Young U.s. Llp",
-            "size": 4467
-          },
-          {
-            "name": "Deloitte & Touche Llp",
-            "size": 1550
+            "name": "Ernst & Young U.s. LLP",
+            "size": 1552
           },
           {
             "name": "Jpmorgan Chase & Co.",
-            "size": 1379
+            "size": 1467
           },
           {
-            "name": "Fujitsu America, Inc.",
-            "size": 584
+            "name": "Cisco Sys Inc.",
+            "size": 1529
+          },
+          {
+            "name": "PriceaterhouseCooper LLC",
+            "size": 0
           }
         ]
       },
@@ -789,12 +342,20 @@
         "name": "US Outsourcing",
         "children": [
           {
-            "name": "Cognizant Technology Solutions U.s. Corporation",
-            "size": 4047
+            "name": "Cognizant Technology Solutions",
+            "size": 21459
           },
           {
             "name": "igate Technologies Inc.",
-            "size": 1997
+            "size": 0
+          },
+          {
+            "name": "Syntel Consulting Inc.",
+            "size": 2286
+          },
+          {
+            "name": "Computer Sciences",
+            "size": 0
           }
         ]
       },
@@ -803,31 +364,27 @@
         "children": [
           {
             "name": "Microsoft Corporation",
-            "size": 4669
+            "size": 3556
           },
           {
             "name": "Google Inc.",
-            "size": 3177
+            "size": 2517
           },
           {
             "name": "Ibm Corporation",
-            "size": 1755
+            "size": 3569
           },
           {
             "name": "Intel Corporation",
-            "size": 1589
+            "size": 1873
           },
           {
             "name": "Amazon Corporate Llc",
-            "size": 2385
+            "size": 2739
           },
           {
             "name": "Apple Inc.",
-            "size": 1496
-          },
-          {
-            "name": "Oracle America, Inc.",
-            "size": 799
+            "size": 1992
           }
         ]
       }
