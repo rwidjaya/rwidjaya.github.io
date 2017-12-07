@@ -34,7 +34,7 @@ d3.csv("h1b_country_10.csv", type1, function(error, data) {
   var g1 = chart1.append("g")
       .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
 
-  console.log(data)
+  // console.log(data)
 
   x_1.domain(d3.extent(data, function(d) { return d.date; }));
   y_1.domain([
@@ -88,7 +88,11 @@ d3.csv("h1b_country_10.csv", type1, function(error, data) {
       .text(function(d) { return d.id; });
 });
 
-// // UPDATE DATA????
+
+//
+// UPDATE DATA
+//
+
 function updateData() {
    d3.csv("h1b_country_10_I.csv", type1, function(error, data) {
      if (error) throw error;
@@ -102,17 +106,13 @@ function updateData() {
          };
        });
 
-     y_1.domain([
-       d3.min(dataPlus, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
-       d3.max(dataPlus, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
-       ]);
-     z_1.domain(dataPlus.map(function(c) { return c.id; }));
+    y_1.domain([
+      d3.min(dataPlus, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
+      d3.max(dataPlus, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
+      ]);
+    z_1.domain(dataPlus.map(function(c) { return c.id; }));
 
      // console.log(dataPlus);
-
-    d3.selectAll(".countryLine")
-      .transition().duration(2000)
-      .attr("d", function(d) { return line(d.values); });
 
     countryUpdate = d3.select("#gCountries").selectAll(".countryLine")
       .data(dataPlus, function(d){ return d.id; })
@@ -143,6 +143,7 @@ function updateData() {
 
    });
  };
+
 
 function type1(d, _, columns) {
   d.date = parseDate(d.date);
