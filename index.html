@@ -58,12 +58,12 @@ path {
 
   <div class="container">
 
-<!--     <div id="option">
+    <div id="option">
     <input name="updateButton" 
            type="button" 
            value="Update" 
            onclick="updateData()" />
-    </div> -->
+    </div>
 
     <div id="chart-1"> 
       <svg width="960" height="500"></svg>
@@ -210,10 +210,10 @@ path {
       .x(function(d) { return x_1(d.date); })
       .y(function(d) { return y_1(d.approvals); })
 
-  d3.csv("h1b_country_10_I.csv", type1, function(error, data) {
+  d3.csv("h1b_country_10.csv", type1, function(error, data) {
     if (error) throw error;
 
-    var country = data.columns.slice(1).map(function(id) {
+    var dataAll = data.columns.slice(1).map(function(id) {
       return {
         id: id,
         values: data.map(function(d) {
@@ -229,19 +229,21 @@ path {
 
     x_1.domain(d3.extent(data, function(d) { return d.date; }));
     y_1.domain([
-      d3.min(country, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
-      d3.max(country, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
+      d3.min(dataAll, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
+      d3.max(dataAll, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
       ]);
-    z_1.domain(country.map(function(c) { return c.id; }));
+    z_1.domain(dataAll.map(function(c) { return c.id; }));
 
     g1.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height1 + ")")
-      .call(d3.axisBottom(x_1));
+      .call(d3.axisBottom(x_1))
+      .attr("id", "xAxis");
 
     g1.append("g")
         .attr("class", "y axis")
         .call(d3.axisLeft(y_1))
+        .attr("id", "yAxis")
       .append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
@@ -249,80 +251,89 @@ path {
         .attr("fill", "#000")
         .text("# of H1-B Approvals");
 
-    var country = g1.selectAll(".country")
-      .data(country)
-      .enter().append("g")
-        .attr("class", "country");
+    var paths = g1.append("g").attr("id", "gCountries")
+      .selectAll(".countryLine")
+      .data(dataAll, function(d){return d.id})
+      .enter().append("path")
+      .attr("class", "countryLine line")
+      .attr("d", function(d) { return line(d.values); })
+      .attr("id", function(d){return d.id})
+      .style("stroke", function(d) { return z_1(d.id); });
 
-    var path = country.append("path")
-        .attr("class", "line")
-        .attr("d", function(d) { return line(d.values); })
-        .style("stroke", function(d) { return z_1(d.id); });
+    var totalLength = paths.node().getTotalLength();
 
-    var totalLength = path.node().getTotalLength();
-
-    path
+    paths
       .attr("stroke-dasharray", totalLength + " " + totalLength)
         .attr("stroke-dashoffset", totalLength)
-        .transition() 
-        .duration(4000) 
+        .transition().duration(4000) 
         .ease(d3.easeLinear) 
         .attr("stroke-dashoffset", 0);
 
-    country
-      .append("text")
-        .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
-        .attr("transform", function(d) { return "translate(" + x_1(d.value.date) + "," + y_1(d.value.approvals) + ")"; })
-        .attr("x", 3)
-        .attr("dy", "0.35em")
-        .style("font", "10px sans-serif")
-        .text(function(d) { return d.id; });
+    // country
+    //   .append("text")
+    //     .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
+    //     .attr("transform", function(d) { return "translate(" + x_1(d.value.date) + "," + y_1(d.value.approvals) + ")"; })
+    //     .attr("x", 3)
+    //     .attr("dy", "0.35em")
+    //     .style("font", "10px sans-serif")
+    //     .text(function(d) { return d.id; });
   });
 
   // // UPDATE DATA????
-  // function updateData() {
-  //     d3.csv("h1b_country_10.csv", type, function(error, data) {
-  //       if (error) throw error;
-  //       var country = data.columns.slice(1).map(function(id) {
-  //         return {
-  //           id: id,
-  //           values: data.map(function(d) {
-  //             return {date: d.date, approvals: d[id]};
-  //             })
-  //           };
-  //         });
-  //       console.log(data[1])
+  function updateData() {
+     d3.csv("h1b_country_10_I.csv", type1, function(error, data) {
+       if (error) throw error;
 
-  //       x.domain(d3.extent(data, function(d) { return d.date; }));
-  //       y.domain([
-  //         d3.min(country, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
-  //         d3.max(country, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
-  //         ]);
-  //       z.domain(country.map(function(c) { return c.id; }));
+       var dataPlus = data.columns.slice(1).map(function(id) {
+         return {
+           id: id,
+           values: data.map(function(d) {
+             return {date: d.date, approvals: d[id]};
+             })
+           };
+         });
 
+       y_1.domain([
+         d3.min(dataPlus, function(c) { return d3.min(c.values, function(d) { return d.approvals; }); }),
+         d3.max(dataPlus, function(c) { return d3.max(c.values, function(d) { return d.approvals; }); })
+         ]);
+       z_1.domain(dataPlus.map(function(c) { return c.id; }));
 
+       // console.log(dataPlus);
 
-  //       // Select the section we want to apply our changes to
+      d3.selectAll(".countryLine")
+        .transition().duration(2000)
+        .attr("d", function(d) { return line(d.values); });
 
-  //       var chart2Alt = d3.selectAll(".county")
-  //               .data(country)
-  //               .transition();
+      countryUpdate = d3.select("#gCountries").selectAll(".countryLine")
+        .data(dataPlus, function(d){ return d.id; })
+        .enter();
 
-  //       console.log(line(data))
+      pathUpdate = countryUpdate.append("path")
+        .attr("id", function(d) { return d.id;})
+        .attr("class", "countryLine line")
+        .attr("d", function(d) { return line(d.values); })
+        .style("stroke", function(d) { return z_1(d.id); });
 
-  //       // Make the changes
-  //           chart2Alt.select(".line")
-  //               .duration(750)
-  //               .attr("d", function(d) { return line(d.values); })
-  //               .style("stroke", function(d) { return z(d.id); });
-  //           chart2Alt.select(".x.axis") // change the x axis
-  //               .duration(750)
-  //               .call(x);
-  //           chart2Alt.select(".y.axis") // change the y axis
-  //               .duration(750)
-  //               .call(y);
-  //   });
-  // }
+      d3.selectAll(".countryLine")
+        .transition().duration(2000)
+        .attr("d", function(d) { return line(d.values); });
+
+      d3.select("#yAxis")
+        .transition().duration(2000)
+        .call(d3.axisLeft(y_1));
+
+      var totalLengthUpdate = pathUpdate.node().getTotalLength();
+
+      pathUpdate
+        .attr("stroke-dasharray", totalLengthUpdate + " " + totalLengthUpdate )
+          .attr("stroke-dashoffset", totalLengthUpdate )
+          .transition().duration(5000) 
+          .ease(d3.easeLinear) 
+          .attr("stroke-dashoffset", 0);
+
+     });
+   };
 
   function type1(d, _, columns) {
     d.date = parseDate(d.date);
@@ -399,8 +410,6 @@ path {
     d.value = +d.value;
     return d;
   }
-
-
 
   </script>
 
