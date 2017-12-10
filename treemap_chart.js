@@ -57,6 +57,7 @@ d3.json("company_size.json", function(error, data) {
       .sort(function(a, b) { return b.height2 - a.height2 || a.value - b.value; });
 
     changed(newRoots);
+    updateBar(this.value);
   });
 });
 
