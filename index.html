@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
   <style>
-  /*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">*/
 
   /*Treemap*/
   svg {
@@ -13,6 +14,30 @@
     fill: none;
     stroke: steelblue;
     stroke-width: 1.5px;
+  }
+
+  .title {
+    fill: black;
+    font-family: courier;
+    font-size: 15px;  
+    text-anchor: center;
+    font-weight: 600;
+  }
+
+  .sm-title {
+    fill: black;
+    font-family: courier;
+    font-size: 13px;  
+    text-anchor: center;
+    font-weight: 600;
+  }
+
+  .caption {
+    fill: black;
+    font-family: sans-serif;
+    font-size: 10px;  
+    text-anchor: center;
+    font-style: italic;
   }
 
 /*  path { 
@@ -30,9 +55,7 @@
     shape-rendering: crispEdges;
   }
 
-  .bar--foreign-outsource {
-    fill: #D92525;
-  }
+  .bar--foreign-outsource {fill: #D92525;}
   .bar--us-outsource {fill: #F25C05;}
   .bar--us-tech {fill: #F29F05;}
   .bar--us-firm {fill: #88A61B;}
@@ -46,15 +69,21 @@
 
 
 <body>
+
+<!-- Bootstrap: http://bl.ocks.org/d3noob/6a3b59149cf3ebdb3fc4 -->
+
 <script type="text/javascript" src="d3.js"></script>
-  <h2>The H1-B Problem </h2>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
   <div class="container">
+  <h2>The H1-B Problem </h2>
 
   <!-- Opening -->
     <div id="narrative-1">
       <p>
-      (Bg on Trump from BAHA exec order)
+      Immigration (or ensuring the lack of it) has been one of the primary, and arguably most contentious, focuses of Donald Trump's presidency. Given the administration's 'Buy American,Hire American' battlecry, it come to no one's suprise that the H1-B program, the most popular type of work visa, is now under heavy scrutiny.
       </p>
       <p>
       The H1-B Work Visa Program was created primarily to welcome foreign enterpreneurs and workers with specialized skills to contribute and fill the skill gap in the American Economy. For years, the H1-B visa have provided a way for foreign nationals to experience the American Dreams. While for some of the lucky ones, the H1-B visa even provided the first step towards being American. 
@@ -62,49 +91,67 @@
       <p>
       Given the popular nature of the program, the US government imposed a 60,000 cap on the number of H1-B visa it can issue every year, with additional 20,000 exemptions given to foreign nationals with master's and higher degree from U.S. universities and full exemption given to foreign nationals working on non-profit and academic organizations. On the years when the cap is reached, the US government will fill the quota with a non-merit based system of <strong>lottery</strong>. The government's choice to employ lottery as a selection criteria is where the problem starts, as it makes the process problematic and prone to abuse.
       </p>
-      <p>
-      The H1-B visa is open for citizens from most countries and visa holders historically have come from all corners of the world. However, despite its openess, top 10 country of origins for H1-B visa beneficiaries have been virtually unchanged in the past 20 years. In the graph below, it can be seen than workers from China in 2016 have more than double their number in 2006. However, this 100% increase in Chinese workers in the past 10 years are nothing compared to the number of Indian workers that historically have majorly benefitted from the H1-B program. 
-      </p>
+    </div>
+
+    
+
+    <div class ="row">
+
+      <div class = "col-md-9" id="chart-1"> 
+        <svg id ='svg-1' width="900" height="500"></svg>
+      </div>
+      <script type="text/javascript" src="line_chart.js"></script>
+
+      <div class = "col-md-3" id="narrative-1.5"> 
+        <p>
+        The H1-B visa is open for citizens from most countries and visa holders historically have come from all corners of the world. However, despite its openess, top 10 country of origins for H1-B visa beneficiaries have been virtually unchanged in the past 20 years. In the graph below, it can be seen than workers from China in 2016 have more than double their number in 2006. However, this 100% increase in Chinese workers in the past 10 years are nothing compared to the number of Indian workers that historically have majorly benefitted from the H1-B program. 
+        </p>
+
+        <div id="option">
+        <input name="updateButton" 
+           type="button" 
+           value="+ India" 
+           onclick="updateData()" />
+        </div>
+      </div>
+
     </div>
 
   <!-- Chart #1: Country Top 10 Line Chart -->
-    <div id="option">
-    <input name="updateButton" 
-           type="button" 
-           value="Update" 
-           onclick="updateData()" />
-    </div>
-    <div id="chart-1"> 
-      <svg id ='svg-1' width="960" height="500"></svg>
-    </div>
-
-    <script type="text/javascript" src="line_chart.js"></script>
+    
 
   <!-- Chart #2: TreeMap Top Companies -->
     <div id="narrative-2">
+      <br/>
+      <br/>
       <p>
       This trend might be understandable if we take into account that most 'specialized skills' jobs are in the STEM field and India is known for their numerous advancements in the STEM field and education. However, a deeper dive in to the data reveals a disturbing trend in which historically more than 40% of H1-B visa approved on average are concentrated around 20 companies, from which 13 are IT outsourcing companies. In fact, these IT outsourcing companies have been notorious for intentionally flooding the system for a higher chance of 'wins' in the lottery. 
       </p>
 
     </div>
+
     <div id="slider"></div>
-    <div id="chart-2">
-      <svg id ='svg-2' width="960" height="550"></svg>
+
+    <div class="row">
+      <div class="col-md-6" id="chart-2">
+        <svg id ='svg-2' width="850" height="650"></svg>
+      </div>
+
+      <script type="text/javascript" src="treemap_chart.js"></script>
+
+    <!-- Chart #2.5: Lower Income -->
+
+      <div class="col-md-6" id="chart-3">
+        <svg id ='svg-3' width="800" height="650"></svg>
+      </div>
+      <script type="text/javascript" src="neg_chart.js"></script>
     </div>
 
-    <script type="text/javascript" src="treemap_chart.js"></script>
-
-  <!-- Chart #2.5: Lower Income -->
     <div id="narrative-3">
       <p>
       This trend becomes more problematic when we take into account that these outsourcing companies have a tendency to pay their foreign employeed uncompetitive rate despite H1-B regulations. 
       </p>
     </div>
-
-    <div id="chart-3">
-      <svg id ='svg-3' width="960" height="700"></svg>
-    </div>
-    <script type="text/javascript" src="neg_chart.js"></script>
 
   </div>
 

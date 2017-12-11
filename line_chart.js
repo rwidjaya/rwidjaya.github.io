@@ -86,6 +86,24 @@ d3.csv("h1b_country_10.csv", type1, function(error, data) {
       .attr("dy", "0.35em")
       .style("font", "10px sans-serif")
       .text(function(d) { return d.id; });
+
+  g1.append("g")
+    .attr("class", "caption")
+    .append("text")
+      .attr("x", width1/4 - 70)
+      .attr("y", height1/6 - 50)
+      .text("Source: Travel.State.Gov, Nonimmigrant Visa Issuance by Nationality");
+
+  g1.append("g")
+    .attr("class", "title")
+    .append("text")
+      .attr("x", width1/4 - 70)
+      .attr("y", height1/6 - 70)
+      .text("Applicants From India Historically Dominates New H1-B Creation");
+
+  // paths.append("title")
+  //       .attr("id", "lineTooltip")
+  //       .text(function(d) { return d.id+ "\n" + format(d.value); });
 });
 
 
