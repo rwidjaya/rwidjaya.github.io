@@ -64,10 +64,21 @@ d3.csv("h1b_country_10.csv", type1, function(error, data) {
     .selectAll(".countryLine")
     .data(dataAll, function(d){return d.id})
     .enter().append("path")
-    .attr("class", "countryLine line")
-    .attr("d", function(d) { return line(d.values); })
-    .attr("id", function(d){return d.id})
-    .style("stroke", function(d) { return z_1(d.id); });
+      .attr("class", "countryLine line")
+      .attr("d", function(d) { return line(d.values); })
+      .attr("id", function(d){return d.id})
+      .style("stroke", function(d) { return z_1(d.id); })
+      .on("mouseover", function(d){
+            // alert("Year: " + d.Year + ": " + d.Celsius + " Celsius");
+            d3.select("#_country")
+                .text("Country: " + d.id);
+        });
+    
+  g1.append("g")
+    .attr("class", "infowin")
+    .attr("transform", "translate(50, 5)")
+    .append("text")
+    .attr("id", "_country");
 
   var totalLength = paths.node().getTotalLength();
 
@@ -76,42 +87,29 @@ d3.csv("h1b_country_10.csv", type1, function(error, data) {
       .attr("stroke-dashoffset", totalLength)
       .transition().duration(4000) 
       .ease(d3.easeLinear) 
-      .attr("stroke-dashoffset", 0);
-
-  paths.select(".countryLine")
-    .append("text")
-      .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
-      .attr("transform", function(d) { return "translate(" + x_1(d.value.date) + "," + y_1(d.value.approvals) + ")"; })
-      .attr("x", 3)
-      .attr("dy", "0.35em")
-      .style("font", "10px sans-serif")
-      .text(function(d) { return d.id; });
+      .attr("stroke-dashoffset", 0)
 
   g1.append("g")
     .attr("class", "caption")
     .append("text")
-      .attr("x", width1/4 - 70)
-      .attr("y", height1/6 - 50)
+      .attr("x", 50)
+      .attr("y", -15)
       .text("Source: Travel.State.Gov, Nonimmigrant Visa Issuance by Nationality");
 
   g1.append("g")
     .attr("class", "title")
     .append("text")
-      .attr("x", width1/4 - 70)
-      .attr("y", height1/6 - 70)
+      .attr("x", 50)
+      .attr("y", -30)
       .text("Applicants From India Historically Dominates New H1-B Creation");
-
-  // paths.append("title")
-  //       .attr("id", "lineTooltip")
-  //       .text(function(d) { return d.id+ "\n" + format(d.value); });
 });
-
 
 //
 // UPDATE DATA
 //
 
 function updateData() {
+   console.log(this.value)
    d3.csv("h1b_country_10_I.csv", type1, function(error, data) {
      if (error) throw error;
 
@@ -130,7 +128,6 @@ function updateData() {
       ]);
     z_1.domain(dataPlus.map(function(c) { return c.id; }));
 
-     // console.log(dataPlus);
 
     countryUpdate = d3.select("#gCountries").selectAll(".countryLine")
       .data(dataPlus, function(d){ return d.id; })
@@ -140,7 +137,13 @@ function updateData() {
       .attr("id", function(d) { return d.id;})
       .attr("class", "countryLine line")
       .attr("d", function(d) { return line(d.values); })
-      .style("stroke", function(d) { return z_1(d.id); });
+      .style("stroke", function(d) { return z_1(d.id); })
+      .on("mouseover", function(d){
+        d3.select("#_country")
+            .text("Country: " + d.id);
+        });;
+
+    countryUpdate.append('title').text(function(d){return d.id});
 
     d3.selectAll(".countryLine")
       .transition().duration(2000)

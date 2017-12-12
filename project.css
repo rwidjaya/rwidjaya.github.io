@@ -1,0 +1,62 @@
+/*Treemap*/
+  svg {
+    font: 10px sans-serif;
+  }
+
+  /*Line Chart*/
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+
+  g.infowin {
+        fill: grey;
+      }
+
+  g.infowin text,
+  .axis text {
+    font: 15px courier;
+    fill: grey;
+  }
+
+  .title {
+    fill: black;
+    font-family: courier;
+    font-size: 15px;  
+    text-anchor: center;
+    font-weight: 600;
+  }
+
+
+  .caption {
+    fill: black;
+    font-family: sans-serif;
+    font-size: 10px;  
+    text-anchor: center;
+    font-style: italic;
+  }
+
+/*  path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+  }*/
+
+  /*Negative Bar Chart*/
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
+
+  .bar--foreign-outsource {fill: #D92525;}
+  .bar--us-outsource {fill: #F25C05;}
+  .bar--us-tech {fill: #F29F05;}
+  .bar--us-firm {fill: #88A61B;}
+
+  .axis text {
+    font: 10px sans-serif;
+  }
